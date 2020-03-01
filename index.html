@@ -1,54 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Lance's Bio Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latitude Weather Comparison</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    ​
 </head>
 
 <body>
-    <header>
-      <h1>Lance Westlake</h1>
 
-    </header>
-    <image src="https://avatars3.githubusercontent.com/u/57381750?s=400&u=13fade5a3a0ec4dbb4939ba3d734af0bce6295e3&v=4"
-      alt="a picture of Lance" height="100" width="100">
+    <!-- navbar div class from bootstrap -->
+    <div class="navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Lattitude</a>
+            <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            ​
+            <!-- adding links to collapsable navbar at small limit -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink"
+                            role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="maxtemp.html">Max Temperature</a>
+                            <a class="dropdown-item" href="humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- container and first section for summary -->
+    <div class="container-fluid" style="padding: 50px">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Summary: Latitude vs. X</h1>
+                        <hr>
+                        <img src="Resources/assets/images/Fig1.png" alt="Latitude vs. Max Temperature"
+                            style="float:left" class="img-fluid" height="500" width="500">
+                        <br/>
+                        <p class="card-text">The purpose of this project was to analyze how weather changes as you get
+                            closer to the equator.
+                            To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a
+                            dataset on over 500 cities.</p>
+                        <br>
+                        <p class="card-text">After assembling the dataset, we used Matplotlib to plot various aspects of
+                            the weather vs.
+                            latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity.
+                            This
+                            site provides the source data and visualizations created as part of the analysis, as well as
+                            explanations and descriptions of any trends and correlations witnessed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second column for visualizations pics -->
+            <div class="col-lg-5 col-md-12" style="margin-top: -25px"> ​
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Visualizations</h2>
+                        <hr>
+                        <div class="text-center">
+                            <a href="maxtemp.html">
+                                <img src="Resources/assets/images/Fig1.png" alt="Latitude vs. Max Temperature"
+                                    title="Latitude vs. Max Temperature" class="img-fluid" height="200" width="325">
+                            </a>
+                            <a href="humidity.html">
+                                <img src="Resources/assets/images/Fig2.png" alt="Latitude vs. Humidity"
+                                    title="Latitude vs. Humidity" class="img-fluid" height="200" width="325">
+                            </a>
+                            <a href="cloudiness.html">
+                                <img src="Resources/assets/images/Fig3.png" alt="Latitude vs. Cloudiness"
+                                    title="Latitude vs. Cloudiness" class="img-fluid" height="200" width="325">
+                            </a>
+                            <a href="windspeed.html">
+                                <img src="Resources/assets/images/Fig4.png" alt="Latitude vs. Wind Speed"
+                                    title="Latitude vs. Wind Speed" class="img-fluid" height="200" width="325">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-      <p>The guy behind the guy, behind the guy. If you want the ultimate, you've got to be willing to pay the ultimate
-        price</p>
-      <p>I enjoy playing and watching sports, running, skiing, and traveling the world.</p>
 
-      <ul>
-        <li><a href="https://www.linkedin.com/in/lansing-westlake-4651b044/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/lance.westlake.5?ref=bookmarks" target="_blank">Facebook</a></li>
-        <li><a href="https://github.com/Lpwestlake" target="_blank">GitHub</a></li>
-      </ul>
 
-      <table border="1">
-        <tr>
-          <th>Favorite Movies</th>
-          <th>Favorite Activities</th>
-          <th>Favorite Music</th>
-        </tr>
-        <tr>
-          <td>Top Gun</td>
-          <td>Skiing</td>
-          <td>EDM</td>
-        </tr>
-        <tr>
-          <td>Goodfellas</td>
-          <td>Running</td>
-          <td>80s</td>
-        </tr>
 
-        <tr>
-          <td>Point Break</td>
-          <td>Hiking</td>
-          <td>90s</td>
-        </tr>
 
-      </table>
+            <!-- paste in scripts to be able to utilize tools -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+
 
 </body>
 
